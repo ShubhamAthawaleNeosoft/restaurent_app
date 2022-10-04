@@ -1,0 +1,114 @@
+header {
+    background: url("../../images/banner2.jpg") center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    nav {
+        padding: 20px 0;
+        background-color: transparent;
+        position: fixed;
+        width: 100%;
+        background-color:rgba(8, 23, 26, 0.664);
+        z-index: 5;
+        top: 0;
+        
+        .nav-items{
+           @include flexlayout;
+           @include md{
+            flex-direction: column;
+            align-items: flex-start;
+           }
+           .toggle-btn{
+            display: none;
+            @include md{
+                display: block;
+                position: absolute;
+                top: 24px;
+                right: 30px;
+                padding: 6px 10px;
+                background-color: $color-primary;
+                border: none;
+                color: $color-white;
+                font-size: 20px;
+            }
+           }
+        }
+        .nav-logo {
+            font-size: 30px;
+            color: $color-primary;
+            font-family: $font1;
+            text-decoration: none;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            @include md{
+                // flex-direction: column;
+                display: none;
+            }
+            @include md-min{
+                display: flex !important;
+            }
+            li {
+                padding: 0 20px;
+                color: $color-white;
+                @include md{
+                    padding: 20px 0;
+                }
+                a {
+                    color: $color-white;
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+                :hover{
+                    color: $color-primary;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+    .banner-containt{
+        position: absolute;
+        top: 35%;
+        
+        .banner_heading{
+        color: $color-primary;
+        font-size: 14rem;
+        font-family: $font1;
+        line-height: 1;
+        margin-top: -80px;
+        @include md{
+            font-size: 7rem;
+            margin-top: -35px;
+        }
+        }
+        .sub_haiding{
+            font-size: 3rem;
+            font-family: $font2;
+            color: $color-white;
+            font-weight:600;
+            padding-left: 300px;
+            // margin-top: 800px;
+            @include md{
+                font-size: 1rem;
+                padding-left: 180px
+            }
+        }
+        .banner-btn{
+            @include btn;
+            border: 2px solid $color-white;
+            background-color: transparent;
+            color: $color-white;
+            margin: 20px 0 0 150px;
+            @include rwd{
+            margin-left: 100px;
+        }
+        }
+        .banner-btn:hover{
+            border: 2px solid $color-primary;
+            background-color: transparent;
+            color: $color-primary;
+            transition: all 0.3s ease-in-out;
+        }
+}
+}

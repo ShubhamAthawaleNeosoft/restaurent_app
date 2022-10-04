@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $font2;
+}
+.container{
+    margin: 0 40px;
+    @include sm{
+        margin:0 15px;
+    }
+}
+section{
+    padding: 50px 0;
+}
